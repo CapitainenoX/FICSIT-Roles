@@ -1,0 +1,4297 @@
+{
+  "schema": 2,
+  "configRevision": 8,
+  "_doc_user": "Edit the copy in %LOCALAPPDATA%\\FactoryGame\\Saved\\FICSITRoles\\FICSITRoles.json (created on first launch). A newer mod revision replaces it and keeps a .old backup.",
+  "mamTrees": true,
+  "_doc": "Declarative division rules. Class names are matched without the _C suffix; a trailing * is a prefix match. A target listed by no division base and no tech node is common (everyone). Listed somewhere: only divisions whose base lists it, or whose researched node grants it, may do it. collect also accepts DropPod. Tech is paid instantly from the player inventory. Texts live in Resources/Localization. Design notes: docs/BALANCE.md.",
+  "terminalKey": "F7",
+  "maxExpectedPlayers": 8,
+  "defaultCoverage": "Off",
+  "denyNotifyCooldownSeconds": 3,
+  "divisions": [
+    {
+      "id": "exploration",
+      "color": "#4FB477",
+      "icon": "div_exploration.png",
+      "base": {
+        "build": [
+          "Build_HubTerminal",
+          "Build_WorkBench",
+          "Build_Workshop",
+          "Build_TradingPost",
+          "Build_Mam",
+          "Build_LookoutTower",
+          "Build_RadarTower",
+          "Build_Portal",
+          "Build_PortalSatellite"
+        ],
+        "craft": [
+          "Recipe_IronPlate",
+          "Recipe_IronRod",
+          "Recipe_Screw",
+          "Recipe_Wire",
+          "Recipe_Cable",
+          "Recipe_Concrete",
+          "Recipe_Biomass_Leaves",
+          "Recipe_Biomass_Wood",
+          "Recipe_XenoZapper",
+          "Recipe_MedicinalInhaler",
+          "Recipe_CandyCaneBasher",
+          "Recipe_Snowball",
+          "Recipe_CandyCane",
+          "Recipe_Fireworks_01",
+          "Recipe_Fireworks_02",
+          "Recipe_Fireworks_03",
+          "Recipe_XenoBasher",
+          "Recipe_RebarGun",
+          "Recipe_SpikedRebar",
+          "Recipe_Rebar_Stunshot",
+          "Recipe_Rebar_Spreadshot",
+          "Recipe_Rebar_Explosive",
+          "Recipe_Nobelisk",
+          "Recipe_NobeliskGas",
+          "Recipe_NobeliskShockwave",
+          "Recipe_NobeliskCluster",
+          "Recipe_NobeliskNuke",
+          "Recipe_NobeliskDetonator",
+          "Recipe_Gunpowder",
+          "Recipe_GunpowderMK2",
+          "Recipe_SpaceRifleMk1",
+          "Recipe_Cartridge",
+          "Recipe_CartridgeSmart",
+          "Recipe_CartridgeChaos",
+          "Recipe_CartridgeChaos_Packaged",
+          "Recipe_ObjectScanner",
+          "Recipe_JetPack",
+          "Recipe_Hoverpack",
+          "Recipe_BladeRunners",
+          "Recipe_Parachute",
+          "Recipe_Chainsaw",
+          "Recipe_PowerCrystalShard_1",
+          "Recipe_PowerCrystalShard_2",
+          "Recipe_PowerCrystalShard_3",
+          "Recipe_AlienDNACapsule",
+          "Recipe_Protein_Hog",
+          "Recipe_Protein_Spitter",
+          "Recipe_Protein_Stinger",
+          "Recipe_Protein_Crab",
+          "Recipe_MedicinalInhalerAlienOrgans",
+          "Recipe_NutritionalInhaler",
+          "Recipe_TherapeuticInhaler",
+          "Recipe_Biomass_AlienProtein",
+          "Recipe_Biomass_Mycelia",
+          "Recipe_Fabric",
+          "Recipe_Gasmask",
+          "Recipe_FilterGasMask",
+          "Recipe_HazmatSuit",
+          "Recipe_FilterHazmat"
+        ],
+        "collect": [
+          "DropPod",
+          "Desc_WAT1",
+          "Desc_WAT2",
+          "Desc_HardDrive",
+          "Desc_Crystal",
+          "Desc_Crystal_mk2",
+          "Desc_Crystal_mk3",
+          "Desc_HogParts",
+          "Desc_SpitterParts",
+          "Desc_StingerParts",
+          "Desc_HatcherParts",
+          "Desc_Leaves",
+          "Desc_Wood",
+          "Desc_Mycelia",
+          "Desc_BerryBush",
+          "Desc_NutBush",
+          "Desc_Berry",
+          "Desc_Nut",
+          "Desc_Shroom"
+        ],
+        "equip": [
+          "Equip_ShockShank",
+          "Equip_MedKit",
+          "Equip_BoomBox",
+          "Equip_BushPlanter",
+          "Equip_Camera",
+          "Equip_CandyCaneBasher",
+          "Equip_Cup",
+          "Equip_CupGold",
+          "Equip_Decoration",
+          "Equip_SnowballWeaponMittens",
+          "Equip_ResourceMiner",
+          "Equip_StunSpear",
+          "Equip_RebarGun_Projectile",
+          "Equip_Rifle",
+          "Equip_Machinegun",
+          "Equip_NobeliskDetonator",
+          "Equip_Hookshot",
+          "Equip_ObjectScanner",
+          "Equip_JetPack",
+          "Equip_HoverPack",
+          "Equip_JumpingStilts",
+          "Equip_Parachute",
+          "Equip_GasMask",
+          "Equip_HazmatSuit",
+          "Equip_Beacon",
+          "Equip_Chainsaw"
+        ]
+      },
+      "startRecipes": [
+        "/Game/FactoryGame/Recipes/Buildings/Recipe_Mam.Recipe_Mam_C"
+      ],
+      "startKit": [
+        [
+          "BP_EquipmentDescriptorStunSpear",
+          1
+        ],
+        [
+          "BP_EquipmentDescriptorObjectScanner",
+          1
+        ],
+        [
+          "Desc_Medkit",
+          5
+        ],
+        [
+          "Desc_IronPlate",
+          20
+        ],
+        [
+          "Desc_IronRod",
+          20
+        ]
+      ]
+    },
+    {
+      "id": "energy",
+      "color": "#F2B630",
+      "icon": "div_energy.png",
+      "base": {
+        "build": [
+          "Build_HubTerminal",
+          "Build_WorkBench",
+          "Build_Workshop",
+          "Build_TradingPost",
+          "Build_Generator*",
+          "Build_AlienPowerBuilding",
+          "Build_PowerStorageMk1",
+          "Build_PowerSwitch",
+          "Build_PriorityPowerSwitch",
+          "Build_PowerTower*",
+          "Build_PowerPole*",
+          "Build_PowerLine",
+          "Build_WaterPump",
+          "Build_OilPump",
+          "Build_FrackingExtractor",
+          "Build_FrackingSmasher"
+        ],
+        "craft": [
+          "Recipe_IronPlate",
+          "Recipe_IronRod",
+          "Recipe_Screw",
+          "Recipe_Wire",
+          "Recipe_Cable",
+          "Recipe_Concrete",
+          "Recipe_Biomass_Leaves",
+          "Recipe_Biomass_Wood",
+          "Recipe_XenoZapper",
+          "Recipe_MedicinalInhaler",
+          "Recipe_CandyCaneBasher",
+          "Recipe_Snowball",
+          "Recipe_CandyCane",
+          "Recipe_Fireworks_01",
+          "Recipe_Fireworks_02",
+          "Recipe_Fireworks_03",
+          "Recipe_Biofuel",
+          "Recipe_Biomass_Mycelia",
+          "Recipe_Biomass_AlienProtein",
+          "Recipe_ZipLine",
+          "Recipe_PlutoniumCell",
+          "Recipe_ElectromagneticControlRod"
+        ],
+        "collect": [
+          "Desc_Leaves",
+          "Desc_Wood",
+          "Desc_Mycelia",
+          "Desc_BerryBush",
+          "Desc_NutBush",
+          "Desc_Berry",
+          "Desc_Nut",
+          "Desc_Shroom",
+          "Desc_NuclearWaste",
+          "Desc_PlutoniumWaste"
+        ],
+        "equip": [
+          "Equip_ShockShank",
+          "Equip_MedKit",
+          "Equip_BoomBox",
+          "Equip_BushPlanter",
+          "Equip_Camera",
+          "Equip_CandyCaneBasher",
+          "Equip_Cup",
+          "Equip_CupGold",
+          "Equip_Decoration",
+          "Equip_SnowballWeaponMittens",
+          "Equip_ResourceMiner",
+          "Equip_Zipline"
+        ]
+      },
+      "startRecipes": [],
+      "startKit": [
+        [
+          "Desc_Wire",
+          60
+        ],
+        [
+          "Desc_Cable",
+          30
+        ],
+        [
+          "Desc_GenericBiomass",
+          60
+        ],
+        [
+          "Desc_Leaves",
+          100
+        ],
+        [
+          "Desc_IronRod",
+          20
+        ]
+      ]
+    },
+    {
+      "id": "industry",
+      "color": "#5AA0D8",
+      "icon": "div_industry.png",
+      "base": {
+        "build": [
+          "Build_HubTerminal",
+          "Build_WorkBench",
+          "Build_Workshop",
+          "Build_TradingPost",
+          "Build_SpaceElevator",
+          "Build_SmelterMk1",
+          "Build_ConstructorMk1",
+          "Build_AssemblerMk1",
+          "Build_FoundryMk1",
+          "Build_ManufacturerMk1",
+          "Build_OilRefinery",
+          "Build_Blender",
+          "Build_Packager",
+          "Build_HadronCollider",
+          "Build_QuantumEncoder",
+          "Build_Converter",
+          "Build_ResourceSink",
+          "Build_ResourceSinkShop",
+          "Build_BlueprintDesigner*",
+          "Build_MinerMk1",
+          "Build_MinerMk2",
+          "Build_MinerMk3"
+        ],
+        "craft": [
+          "Recipe_IronPlate",
+          "Recipe_IronRod",
+          "Recipe_Screw",
+          "Recipe_Wire",
+          "Recipe_Cable",
+          "Recipe_Concrete",
+          "Recipe_Biomass_Leaves",
+          "Recipe_Biomass_Wood",
+          "Recipe_XenoZapper",
+          "Recipe_MedicinalInhaler",
+          "Recipe_CandyCaneBasher",
+          "Recipe_Snowball",
+          "Recipe_CandyCane",
+          "Recipe_Fireworks_01",
+          "Recipe_Fireworks_02",
+          "Recipe_Fireworks_03",
+          "Recipe_CopperSheet",
+          "Recipe_IronPlateReinforced",
+          "Recipe_Rotor",
+          "Recipe_ModularFrame",
+          "Recipe_Biomass_Mycelia",
+          "Recipe_Biomass_AlienProtein",
+          "Recipe_SteelBeam",
+          "Recipe_SteelPipe",
+          "Recipe_EncasedIndustrialBeam",
+          "Recipe_Stator",
+          "Recipe_Motor",
+          "Recipe_Quickwire",
+          "Recipe_Silica",
+          "Recipe_CircuitBoard",
+          "Recipe_AILimiter",
+          "Recipe_Fabric",
+          "Recipe_Computer",
+          "Recipe_ModularFrameHeavy",
+          "Recipe_HighSpeedConnector",
+          "Recipe_PortableMiner"
+        ],
+        "collect": [
+          "Desc_Berry",
+          "Desc_Nut",
+          "Desc_Shroom"
+        ],
+        "equip": [
+          "Equip_ShockShank",
+          "Equip_MedKit",
+          "Equip_BoomBox",
+          "Equip_BushPlanter",
+          "Equip_Camera",
+          "Equip_CandyCaneBasher",
+          "Equip_Cup",
+          "Equip_CupGold",
+          "Equip_Decoration",
+          "Equip_SnowballWeaponMittens",
+          "Equip_ResourceMiner",
+          "Equip_PortableMinerDispenser"
+        ]
+      },
+      "startRecipes": [],
+      "startKit": [
+        [
+          "Desc_IronIngot",
+          60
+        ],
+        [
+          "Desc_CopperIngot",
+          40
+        ],
+        [
+          "Desc_IronPlate",
+          30
+        ],
+        [
+          "Desc_IronRod",
+          30
+        ],
+        [
+          "Desc_IronScrew",
+          80
+        ],
+        [
+          "BP_ItemDescriptorPortableMiner",
+          1
+        ]
+      ]
+    },
+    {
+      "id": "logistics",
+      "color": "#B48CE0",
+      "icon": "div_logistics.png",
+      "base": {
+        "build": [
+          "Build_HubTerminal",
+          "Build_WorkBench",
+          "Build_Workshop",
+          "Build_TradingPost",
+          "Build_SpaceElevator",
+          "Build_Conveyor*",
+          "Build_Pipeline",
+          "Build_Pipeline_*",
+          "Build_PipelineSupport",
+          "Build_PipelineSupportWall",
+          "Build_PipelineSupportWallHole",
+          "Build_PipelineJunction_*",
+          "Build_PipelineFlowIndicator",
+          "Build_PipeSupportStackable",
+          "Build_FoundationPassthrough_*",
+          "Build_PipelinePump",
+          "Build_Valve",
+          "Build_PipeStorageTank",
+          "Build_PipelineMK2",
+          "Build_PipelineMK2_*",
+          "Build_PipelinePumpMK2",
+          "Build_IndustrialTank",
+          "Build_TruckStation",
+          "Build_FluidTruckStation",
+          "Build_DroneStation",
+          "Build_Railroad*",
+          "Build_TrainStation",
+          "Build_TrainPlatformEmpty*",
+          "Build_TrainDockingStation*",
+          "Build_PipeHyper*",
+          "Build_HyperTube*",
+          "Build_HypertubeTJunction",
+          "Build_HyperPoleStackable",
+          "Build_JumpPad*",
+          "Build_LandingPad",
+          "Build_Elevator*",
+          "Build_CentralStorage",
+          "Build_StorageContainerMk1",
+          "Build_StorageContainerMk2",
+          "Build_Barrier_*",
+          "Build_Beam",
+          "Build_Beam_*",
+          "Build_BigGarageDoor_*",
+          "Build_CandyCaneDecor",
+          "Build_CatwalkCorner",
+          "Build_CatwalkCross",
+          "Build_CatwalkRamp",
+          "Build_CatwalkStairs",
+          "Build_CatwalkStraight",
+          "Build_CatwalkT",
+          "Build_CeilingLight",
+          "Build_ChainLinkFence",
+          "Build_ConcreteConcaveRoundFoundation_*",
+          "Build_Concrete_*",
+          "Build_DoorMiddle",
+          "Build_DownQuarterPipeInCorner_*",
+          "Build_DownQuarterPipeOutCorner_*",
+          "Build_DownQuarterPipe_*",
+          "Build_FenceRamp_*",
+          "Build_Fence_*",
+          "Build_Flat_*",
+          "Build_FloodlightPole",
+          "Build_FloodlightWall",
+          "Build_FoundationGlass_*",
+          "Build_Foundation_*",
+          "Build_Gate_*",
+          "Build_InvertedRamp_*",
+          "Build_Inverted_*",
+          "Build_Ladder",
+          "Build_LargeFan",
+          "Build_LargeVent",
+          "Build_LightsControlPanel",
+          "Build_Locker_*",
+          "Build_PillarBase",
+          "Build_PillarBase_*",
+          "Build_PillarMiddle",
+          "Build_PillarMiddle_*",
+          "Build_PillarTop",
+          "Build_Pillar_*",
+          "Build_PortalPotty",
+          "Build_QuarterPipe",
+          "Build_QuarterPipeCorner_*",
+          "Build_QuarterPipeInCorner_*",
+          "Build_QuarterPipeMiddleInCorner_*",
+          "Build_QuarterPipeMiddleOutCorner_*",
+          "Build_QuarterPipeMiddle_*",
+          "Build_QuarterPipeOutCorner_*",
+          "Build_QuarterPipe_*",
+          "Build_Railing_*",
+          "Build_RampDouble",
+          "Build_RampDouble_*",
+          "Build_RampInverted_*",
+          "Build_Ramp_*",
+          "Build_Roof_*",
+          "Build_SM_RailingRamp_*",
+          "Build_SignPole",
+          "Build_SignPole_*",
+          "Build_SnowCannon",
+          "Build_SnowDispenser",
+          "Build_Snowman",
+          "Build_StackableShelf",
+          "Build_Stair_*",
+          "Build_Stairs_*",
+          "Build_StandaloneWidgetSign_*",
+          "Build_SteelWall_*",
+          "Build_StorageHazard",
+          "Build_StorageMedkit",
+          "Build_StreetLight",
+          "Build_TarpFence",
+          "Build_TreeGiftProducer",
+          "Build_WalkwayCross",
+          "Build_WalkwayRamp",
+          "Build_WalkwayStraight",
+          "Build_WalkwayT",
+          "Build_WalkwayTrun",
+          "Build_WallSet_*",
+          "Build_Wall_*",
+          "Build_WreathDecor",
+          "Build_XmassLightsLine",
+          "Build_XmassTree"
+        ],
+        "craft": [
+          "Recipe_IronPlate",
+          "Recipe_IronRod",
+          "Recipe_Screw",
+          "Recipe_Wire",
+          "Recipe_Cable",
+          "Recipe_Concrete",
+          "Recipe_Biomass_Leaves",
+          "Recipe_Biomass_Wood",
+          "Recipe_XenoZapper",
+          "Recipe_MedicinalInhaler",
+          "Recipe_CandyCaneBasher",
+          "Recipe_Snowball",
+          "Recipe_CandyCane",
+          "Recipe_Fireworks_01",
+          "Recipe_Fireworks_02",
+          "Recipe_Fireworks_03",
+          "Recipe_FactoryCart",
+          "Recipe_GoldenCart"
+        ],
+        "collect": [
+          "Desc_Berry",
+          "Desc_Nut",
+          "Desc_Shroom"
+        ],
+        "equip": [
+          "Equip_ShockShank",
+          "Equip_MedKit",
+          "Equip_BoomBox",
+          "Equip_BushPlanter",
+          "Equip_Camera",
+          "Equip_CandyCaneBasher",
+          "Equip_Cup",
+          "Equip_CupGold",
+          "Equip_Decoration",
+          "Equip_SnowballWeaponMittens",
+          "Equip_ResourceMiner",
+          "Equip_GolfCartDispenser",
+          "Equip_GoldGolfCartDispenser"
+        ]
+      },
+      "startRecipes": [],
+      "startKit": [
+        [
+          "Desc_IronPlate",
+          50
+        ],
+        [
+          "Desc_IronRod",
+          40
+        ],
+        [
+          "Desc_IronScrew",
+          60
+        ],
+        [
+          "Desc_Cement",
+          40
+        ],
+        [
+          "Desc_Wire",
+          30
+        ]
+      ]
+    },
+    {
+      "id": "general",
+      "color": "#9AA3AD",
+      "icon": "div_general.png",
+      "base": {
+        "build": [
+          "Build_HubTerminal",
+          "Build_WorkBench",
+          "Build_Workshop",
+          "Build_TradingPost",
+          "Build_SpaceElevator",
+          "Build_Barrier_*",
+          "Build_Beam",
+          "Build_Beam_*",
+          "Build_BigGarageDoor_*",
+          "Build_CandyCaneDecor",
+          "Build_CatwalkCorner",
+          "Build_CatwalkCross",
+          "Build_CatwalkRamp",
+          "Build_CatwalkStairs",
+          "Build_CatwalkStraight",
+          "Build_CatwalkT",
+          "Build_CeilingLight",
+          "Build_ChainLinkFence",
+          "Build_ConcreteConcaveRoundFoundation_*",
+          "Build_Concrete_*",
+          "Build_DoorMiddle",
+          "Build_DownQuarterPipeInCorner_*",
+          "Build_DownQuarterPipeOutCorner_*",
+          "Build_DownQuarterPipe_*",
+          "Build_FenceRamp_*",
+          "Build_Fence_*",
+          "Build_Flat_*",
+          "Build_FloodlightPole",
+          "Build_FloodlightWall",
+          "Build_FoundationGlass_*",
+          "Build_FoundationPassthrough_Lift",
+          "Build_Foundation_*",
+          "Build_Gate_*",
+          "Build_InvertedRamp_*",
+          "Build_Inverted_*",
+          "Build_Ladder",
+          "Build_LargeFan",
+          "Build_LargeVent",
+          "Build_LightsControlPanel",
+          "Build_Locker_*",
+          "Build_PillarBase",
+          "Build_PillarBase_*",
+          "Build_PillarMiddle",
+          "Build_PillarMiddle_*",
+          "Build_PillarTop",
+          "Build_Pillar_*",
+          "Build_PortalPotty",
+          "Build_QuarterPipe",
+          "Build_QuarterPipeCorner_*",
+          "Build_QuarterPipeInCorner_*",
+          "Build_QuarterPipeMiddleInCorner_*",
+          "Build_QuarterPipeMiddleOutCorner_*",
+          "Build_QuarterPipeMiddle_*",
+          "Build_QuarterPipeOutCorner_*",
+          "Build_QuarterPipe_*",
+          "Build_Railing_*",
+          "Build_RampDouble",
+          "Build_RampDouble_*",
+          "Build_RampInverted_*",
+          "Build_Ramp_*",
+          "Build_Roof_*",
+          "Build_SM_RailingRamp_*",
+          "Build_SignPole",
+          "Build_SignPole_*",
+          "Build_SnowCannon",
+          "Build_SnowDispenser",
+          "Build_Snowman",
+          "Build_StackableShelf",
+          "Build_Stair_*",
+          "Build_Stairs_*",
+          "Build_StandaloneWidgetSign_*",
+          "Build_SteelWall_*",
+          "Build_StorageHazard",
+          "Build_StorageMedkit",
+          "Build_StreetLight",
+          "Build_TarpFence",
+          "Build_TreeGiftProducer",
+          "Build_WalkwayCross",
+          "Build_WalkwayRamp",
+          "Build_WalkwayStraight",
+          "Build_WalkwayT",
+          "Build_WalkwayTrun",
+          "Build_WallSet_*",
+          "Build_Wall_*",
+          "Build_WreathDecor",
+          "Build_XmassLightsLine",
+          "Build_XmassTree",
+          "Build_ConveyorBeltMk1",
+          "Build_ConveyorLiftMk1",
+          "Build_ConveyorAttachmentSplitter",
+          "Build_ConveyorAttachmentSplitterLift",
+          "Build_ConveyorAttachmentMerger",
+          "Build_ConveyorAttachmentMergerLift",
+          "Build_ConveyorPole",
+          "Build_ConveyorPoleStackable",
+          "Build_ConveyorPoleWall",
+          "Build_ConveyorCeilingAttachment",
+          "Build_ConveyorWallHole",
+          "Build_ConveyorBeltMk2",
+          "Build_ConveyorLiftMk2",
+          "Build_PowerPoleMk1",
+          "Build_PowerPoleWall",
+          "Build_PowerPoleWallDouble",
+          "Build_PowerLine",
+          "Build_SmelterMk1",
+          "Build_ConstructorMk1",
+          "Build_AssemblerMk1",
+          "Build_MinerMk1",
+          "Build_StorageContainerMk1",
+          "Build_Mam",
+          "Build_LookoutTower",
+          "Build_GeneratorBiomass*"
+        ],
+        "craft": [
+          "Recipe_IronPlate",
+          "Recipe_IronRod",
+          "Recipe_Screw",
+          "Recipe_Wire",
+          "Recipe_Cable",
+          "Recipe_Concrete",
+          "Recipe_Biomass_Leaves",
+          "Recipe_Biomass_Wood",
+          "Recipe_XenoZapper",
+          "Recipe_MedicinalInhaler",
+          "Recipe_CandyCaneBasher",
+          "Recipe_Snowball",
+          "Recipe_CandyCane",
+          "Recipe_Fireworks_01",
+          "Recipe_Fireworks_02",
+          "Recipe_Fireworks_03",
+          "Recipe_CopperSheet",
+          "Recipe_IronPlateReinforced",
+          "Recipe_Rotor",
+          "Recipe_ModularFrame",
+          "Recipe_Biomass_Mycelia",
+          "Recipe_Biomass_AlienProtein",
+          "Recipe_Biofuel",
+          "Recipe_PortableMiner",
+          "Recipe_XenoBasher",
+          "Recipe_ObjectScanner",
+          "Recipe_Parachute",
+          "Recipe_Chainsaw"
+        ],
+        "collect": [
+          "Desc_Leaves",
+          "Desc_Wood",
+          "Desc_Mycelia",
+          "Desc_BerryBush",
+          "Desc_NutBush",
+          "Desc_Berry",
+          "Desc_Nut",
+          "Desc_Shroom",
+          "Desc_Crystal",
+          "Desc_HogParts"
+        ],
+        "equip": [
+          "Equip_ShockShank",
+          "Equip_MedKit",
+          "Equip_BoomBox",
+          "Equip_BushPlanter",
+          "Equip_Camera",
+          "Equip_CandyCaneBasher",
+          "Equip_Cup",
+          "Equip_CupGold",
+          "Equip_Decoration",
+          "Equip_SnowballWeaponMittens",
+          "Equip_ResourceMiner",
+          "Equip_StunSpear",
+          "Equip_ObjectScanner",
+          "Equip_PortableMinerDispenser",
+          "Equip_Parachute",
+          "Equip_Chainsaw"
+        ]
+      },
+      "startRecipes": [],
+      "startKit": [
+        [
+          "Desc_IronPlate",
+          30
+        ],
+        [
+          "Desc_IronRod",
+          30
+        ],
+        [
+          "Desc_Wire",
+          30
+        ],
+        [
+          "Desc_Cable",
+          10
+        ],
+        [
+          "Desc_Leaves",
+          50
+        ],
+        [
+          "BP_ItemDescriptorPortableMiner",
+          1
+        ],
+        [
+          "Desc_Medkit",
+          2
+        ]
+      ]
+    }
+  ],
+  "techTree": [
+    {
+      "id": "exploration.fieldtraining",
+      "division": "exploration",
+      "tier": 1,
+      "col": 3,
+      "requires": [],
+      "cost": [
+        [
+          "Desc_IronPlate",
+          200
+        ],
+        [
+          "Desc_Wire",
+          300
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_Ladder",
+          "Build_StorageContainerMk1"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "exploration.campfire",
+      "division": "exploration",
+      "tier": 2,
+      "col": 0,
+      "requires": [
+        "exploration.fieldtraining"
+      ],
+      "cost": [
+        [
+          "Desc_IronPlateReinforced",
+          60
+        ],
+        [
+          "Desc_CopperSheet",
+          200
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_GeneratorBiomass*",
+          "Build_PowerPoleMk1",
+          "Build_PowerPoleWall",
+          "Build_PowerPoleWallDouble",
+          "Build_PowerLine"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "exploration.coalcamp",
+      "division": "exploration",
+      "tier": 3,
+      "col": 0,
+      "requires": [
+        "exploration.campfire"
+      ],
+      "cost": [
+        [
+          "Desc_ModularFrame",
+          40
+        ],
+        [
+          "Desc_SteelPlate",
+          120
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_GeneratorCoal",
+          "Build_Pipeline",
+          "Build_Pipeline_*",
+          "Build_PipelineSupport",
+          "Build_PipelineSupportWall",
+          "Build_PipelineSupportWallHole",
+          "Build_PipelineJunction_*",
+          "Build_PipelineFlowIndicator",
+          "Build_PipeSupportStackable",
+          "Build_FoundationPassthrough_Pipe"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "exploration.powerbank",
+      "division": "exploration",
+      "tier": 4,
+      "col": 0,
+      "requires": [
+        "exploration.coalcamp"
+      ],
+      "cost": [
+        [
+          "Desc_SteelPlate",
+          160
+        ],
+        [
+          "Desc_SteelPlateReinforced",
+          60
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_PowerStorageMk1",
+          "Build_PowerSwitch"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "exploration.gridpoles",
+      "division": "exploration",
+      "tier": 5,
+      "col": 0,
+      "requires": [
+        "exploration.powerbank"
+      ],
+      "cost": [
+        [
+          "Desc_Plastic",
+          200
+        ],
+        [
+          "Desc_CircuitBoard",
+          60
+        ],
+        [
+          "Desc_SteelPlateReinforced",
+          100
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_PowerPoleMk2",
+          "Build_PowerPoleWall_Mk2",
+          "Build_PowerPoleWallDouble_Mk2"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "exploration.geothermal",
+      "division": "exploration",
+      "tier": 6,
+      "col": 0,
+      "requires": [
+        "exploration.gridpoles"
+      ],
+      "cost": [
+        [
+          "Desc_Computer",
+          30
+        ],
+        [
+          "Desc_CircuitBoard",
+          120
+        ],
+        [
+          "Desc_Rubber",
+          400
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_GeneratorGeoThermal"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "exploration.augmenter",
+      "division": "exploration",
+      "tier": 7,
+      "col": 0,
+      "requires": [
+        "exploration.geothermal"
+      ],
+      "cost": [
+        [
+          "Desc_AluminumPlate",
+          300
+        ],
+        [
+          "Desc_Computer",
+          40
+        ],
+        [
+          "Desc_WAT2",
+          20
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_AlienPowerBuilding"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "exploration.portableminer",
+      "division": "exploration",
+      "tier": 2,
+      "col": 1,
+      "requires": [
+        "exploration.fieldtraining"
+      ],
+      "cost": [
+        [
+          "Desc_Rotor",
+          40
+        ],
+        [
+          "Desc_Cement",
+          300
+        ]
+      ],
+      "grants": {
+        "build": [],
+        "craft": [
+          "Recipe_PortableMiner"
+        ],
+        "collect": [],
+        "equip": [
+          "Equip_PortableMinerDispenser"
+        ]
+      }
+    },
+    {
+      "id": "exploration.drill",
+      "division": "exploration",
+      "tier": 3,
+      "col": 1,
+      "requires": [
+        "exploration.portableminer"
+      ],
+      "cost": [
+        [
+          "Desc_Rotor",
+          80
+        ],
+        [
+          "Desc_IronPlateReinforced",
+          100
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_MinerMk1"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "exploration.remoteminer",
+      "division": "exploration",
+      "tier": 4,
+      "col": 1,
+      "requires": [
+        "exploration.drill"
+      ],
+      "cost": [
+        [
+          "Desc_SteelPipe",
+          160
+        ],
+        [
+          "Desc_Motor",
+          30
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_MinerMk2"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "exploration.prospector",
+      "division": "exploration",
+      "tier": 5,
+      "col": 1,
+      "requires": [
+        "exploration.remoteminer"
+      ],
+      "cost": [
+        [
+          "Desc_Rubber",
+          200
+        ],
+        [
+          "Desc_Motor",
+          50
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_OilPump"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "exploration.wells",
+      "division": "exploration",
+      "tier": 6,
+      "col": 1,
+      "requires": [
+        "exploration.prospector"
+      ],
+      "cost": [
+        [
+          "Desc_ModularFrameHeavy",
+          30
+        ],
+        [
+          "Desc_Plastic",
+          400
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_FrackingExtractor",
+          "Build_FrackingSmasher"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "exploration.fieldbelts",
+      "division": "exploration",
+      "tier": 2,
+      "col": 2,
+      "requires": [
+        "exploration.fieldtraining"
+      ],
+      "cost": [
+        [
+          "Desc_CopperSheet",
+          200
+        ],
+        [
+          "Desc_Wire",
+          500
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_ConveyorBeltMk1",
+          "Build_ConveyorLiftMk1",
+          "Build_ConveyorAttachmentSplitter",
+          "Build_ConveyorAttachmentSplitterLift",
+          "Build_ConveyorAttachmentMerger",
+          "Build_ConveyorAttachmentMergerLift",
+          "Build_ConveyorPole",
+          "Build_ConveyorPoleStackable",
+          "Build_ConveyorPoleWall",
+          "Build_ConveyorCeilingAttachment",
+          "Build_ConveyorWallHole"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "exploration.depot",
+      "division": "exploration",
+      "tier": 3,
+      "col": 2,
+      "requires": [
+        "exploration.fieldbelts"
+      ],
+      "cost": [
+        [
+          "Desc_SteelPlate",
+          120
+        ],
+        [
+          "Desc_CopperSheet",
+          300
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_CentralStorage"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "exploration.cache",
+      "division": "exploration",
+      "tier": 4,
+      "col": 2,
+      "requires": [
+        "exploration.depot"
+      ],
+      "cost": [
+        [
+          "Desc_SteelPlateReinforced",
+          60
+        ],
+        [
+          "Desc_Stator",
+          60
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_StorageContainerMk2"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "exploration.jumppads",
+      "division": "exploration",
+      "tier": 2,
+      "col": 3,
+      "requires": [
+        "exploration.fieldtraining"
+      ],
+      "cost": [
+        [
+          "Desc_Cement",
+          300
+        ],
+        [
+          "Desc_IronPlateReinforced",
+          60
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_JumpPad*",
+          "Build_LandingPad"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "exploration.hypertube",
+      "division": "exploration",
+      "tier": 3,
+      "col": 3,
+      "requires": [
+        "exploration.jumppads"
+      ],
+      "cost": [
+        [
+          "Desc_IronPlateReinforced",
+          100
+        ],
+        [
+          "Desc_ModularFrame",
+          40
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_PipeHyper*",
+          "Build_HyperTube*",
+          "Build_HypertubeTJunction",
+          "Build_HyperPoleStackable",
+          "Build_FoundationPassthrough_Hypertube"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "exploration.elevator",
+      "division": "exploration",
+      "tier": 4,
+      "col": 3,
+      "requires": [
+        "exploration.hypertube"
+      ],
+      "cost": [
+        [
+          "Desc_Motor",
+          30
+        ],
+        [
+          "Desc_SteelPlate",
+          160
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_Elevator*"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "exploration.zipline",
+      "division": "exploration",
+      "tier": 5,
+      "col": 3,
+      "requires": [
+        "exploration.elevator"
+      ],
+      "cost": [
+        [
+          "Desc_CircuitBoard",
+          60
+        ],
+        [
+          "Desc_SteelPlateReinforced",
+          100
+        ],
+        [
+          "Desc_Rubber",
+          200
+        ]
+      ],
+      "grants": {
+        "build": [],
+        "craft": [
+          "Recipe_ZipLine"
+        ],
+        "collect": [],
+        "equip": [
+          "Equip_Zipline"
+        ]
+      }
+    },
+    {
+      "id": "exploration.foundations",
+      "division": "exploration",
+      "tier": 2,
+      "col": 5,
+      "requires": [
+        "exploration.fieldtraining"
+      ],
+      "cost": [
+        [
+          "Desc_Wire",
+          500
+        ],
+        [
+          "Desc_Rotor",
+          40
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_ConcreteConcaveRoundFoundation_*",
+          "Build_Concrete_*",
+          "Build_DownQuarterPipeInCorner_*",
+          "Build_DownQuarterPipeOutCorner_*",
+          "Build_DownQuarterPipe_*",
+          "Build_Flat_*",
+          "Build_FoundationGlass_*",
+          "Build_FoundationPassthrough_Lift",
+          "Build_Foundation_*",
+          "Build_InvertedRamp_*",
+          "Build_Inverted_*",
+          "Build_PillarBase",
+          "Build_PillarBase_*",
+          "Build_PillarMiddle",
+          "Build_PillarMiddle_*",
+          "Build_PillarTop",
+          "Build_Pillar_*",
+          "Build_QuarterPipe",
+          "Build_QuarterPipeCorner_*",
+          "Build_QuarterPipeInCorner_*",
+          "Build_QuarterPipeMiddleInCorner_*",
+          "Build_QuarterPipeMiddleOutCorner_*",
+          "Build_QuarterPipeMiddle_*",
+          "Build_QuarterPipeOutCorner_*",
+          "Build_QuarterPipe_*",
+          "Build_RampDouble",
+          "Build_RampDouble_*",
+          "Build_RampInverted_*",
+          "Build_Ramp_*"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "exploration.walls",
+      "division": "exploration",
+      "tier": 3,
+      "col": 5,
+      "requires": [
+        "exploration.foundations"
+      ],
+      "cost": [
+        [
+          "Desc_CopperSheet",
+          300
+        ],
+        [
+          "Desc_Rotor",
+          80
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_Barrier_*",
+          "Build_BigGarageDoor_*",
+          "Build_ChainLinkFence",
+          "Build_DoorMiddle",
+          "Build_FenceRamp_*",
+          "Build_Fence_*",
+          "Build_FloodlightWall",
+          "Build_Gate_*",
+          "Build_Roof_*",
+          "Build_SteelWall_*",
+          "Build_TarpFence",
+          "Build_WallSet_*",
+          "Build_Wall_*"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "exploration.walkways",
+      "division": "exploration",
+      "tier": 4,
+      "col": 5,
+      "requires": [
+        "exploration.walls"
+      ],
+      "cost": [
+        [
+          "Desc_Stator",
+          60
+        ],
+        [
+          "Desc_SteelPipe",
+          160
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_Beam",
+          "Build_Beam_*",
+          "Build_CatwalkCorner",
+          "Build_CatwalkCross",
+          "Build_CatwalkRamp",
+          "Build_CatwalkStairs",
+          "Build_CatwalkStraight",
+          "Build_CatwalkT",
+          "Build_Ladder",
+          "Build_Railing_*",
+          "Build_SM_RailingRamp_*",
+          "Build_Stair_*",
+          "Build_Stairs_*",
+          "Build_WalkwayCross",
+          "Build_WalkwayRamp",
+          "Build_WalkwayStraight",
+          "Build_WalkwayT",
+          "Build_WalkwayTrun",
+          "Build_CandyCaneDecor",
+          "Build_CeilingLight",
+          "Build_FloodlightPole",
+          "Build_LargeFan",
+          "Build_LargeVent",
+          "Build_LightsControlPanel",
+          "Build_Locker_*",
+          "Build_PortalPotty",
+          "Build_SignPole",
+          "Build_SignPole_*",
+          "Build_SnowCannon",
+          "Build_SnowDispenser",
+          "Build_Snowman",
+          "Build_StackableShelf",
+          "Build_StandaloneWidgetSign_*",
+          "Build_StorageHazard",
+          "Build_StorageMedkit",
+          "Build_StreetLight",
+          "Build_TreeGiftProducer",
+          "Build_WreathDecor",
+          "Build_XmassLightsLine",
+          "Build_XmassTree"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "exploration.fieldforge",
+      "division": "exploration",
+      "tier": 2,
+      "col": 6,
+      "requires": [
+        "exploration.fieldtraining"
+      ],
+      "cost": [
+        [
+          "Desc_IronPlateReinforced",
+          60
+        ],
+        [
+          "Desc_CopperSheet",
+          200
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_SmelterMk1",
+          "Build_ConstructorMk1"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "exploration.sink",
+      "division": "exploration",
+      "tier": 3,
+      "col": 6,
+      "requires": [
+        "exploration.fieldforge"
+      ],
+      "cost": [
+        [
+          "Desc_ModularFrame",
+          40
+        ],
+        [
+          "Desc_SteelPlate",
+          120
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_ResourceSink",
+          "Build_ResourceSinkShop"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "exploration.packager",
+      "division": "exploration",
+      "tier": 4,
+      "col": 6,
+      "requires": [
+        "exploration.sink"
+      ],
+      "cost": [
+        [
+          "Desc_SteelPlate",
+          160
+        ],
+        [
+          "Desc_SteelPlateReinforced",
+          60
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_Packager"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "energy.induction",
+      "division": "energy",
+      "tier": 1,
+      "col": 3,
+      "requires": [],
+      "cost": [
+        [
+          "Desc_IronRod",
+          200
+        ],
+        [
+          "Desc_Cable",
+          150
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_Ladder",
+          "Build_StorageContainerMk1"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "energy.pipes",
+      "division": "energy",
+      "tier": 2,
+      "col": 0,
+      "requires": [
+        "energy.induction"
+      ],
+      "cost": [
+        [
+          "Desc_Rotor",
+          40
+        ],
+        [
+          "Desc_Cement",
+          300
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_Pipeline",
+          "Build_Pipeline_*",
+          "Build_PipelineSupport",
+          "Build_PipelineSupportWall",
+          "Build_PipelineSupportWallHole",
+          "Build_PipelineJunction_*",
+          "Build_PipelineFlowIndicator",
+          "Build_PipeSupportStackable",
+          "Build_FoundationPassthrough_Pipe"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "energy.fluidworks",
+      "division": "energy",
+      "tier": 3,
+      "col": 0,
+      "requires": [
+        "energy.pipes"
+      ],
+      "cost": [
+        [
+          "Desc_Rotor",
+          80
+        ],
+        [
+          "Desc_IronPlateReinforced",
+          100
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_PipelinePump",
+          "Build_Valve",
+          "Build_PipeStorageTank"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "energy.pipemk2",
+      "division": "energy",
+      "tier": 4,
+      "col": 0,
+      "requires": [
+        "energy.fluidworks"
+      ],
+      "cost": [
+        [
+          "Desc_SteelPipe",
+          160
+        ],
+        [
+          "Desc_Motor",
+          30
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_PipelineMK2",
+          "Build_PipelineMK2_*",
+          "Build_PipelinePumpMK2",
+          "Build_IndustrialTank"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "energy.fueltrucks",
+      "division": "energy",
+      "tier": 5,
+      "col": 0,
+      "requires": [
+        "energy.pipemk2"
+      ],
+      "cost": [
+        [
+          "Desc_Motor",
+          50
+        ],
+        [
+          "Desc_Plastic",
+          200
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_FluidTruckStation"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "energy.coaldrill",
+      "division": "energy",
+      "tier": 2,
+      "col": 1,
+      "requires": [
+        "energy.induction"
+      ],
+      "cost": [
+        [
+          "Desc_CopperSheet",
+          200
+        ],
+        [
+          "Desc_Wire",
+          500
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_MinerMk1"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "energy.coalmining",
+      "division": "energy",
+      "tier": 3,
+      "col": 1,
+      "requires": [
+        "energy.coaldrill"
+      ],
+      "cost": [
+        [
+          "Desc_SteelPlate",
+          120
+        ],
+        [
+          "Desc_CopperSheet",
+          300
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_MinerMk2"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "energy.coalbelts",
+      "division": "energy",
+      "tier": 2,
+      "col": 2,
+      "requires": [
+        "energy.induction"
+      ],
+      "cost": [
+        [
+          "Desc_Cement",
+          300
+        ],
+        [
+          "Desc_IronPlateReinforced",
+          60
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_ConveyorBeltMk1",
+          "Build_ConveyorLiftMk1",
+          "Build_ConveyorAttachmentSplitter",
+          "Build_ConveyorAttachmentSplitterLift",
+          "Build_ConveyorAttachmentMerger",
+          "Build_ConveyorAttachmentMergerLift",
+          "Build_ConveyorPole",
+          "Build_ConveyorPoleStackable",
+          "Build_ConveyorPoleWall",
+          "Build_ConveyorCeilingAttachment",
+          "Build_ConveyorWallHole"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "energy.fastbelts",
+      "division": "energy",
+      "tier": 3,
+      "col": 2,
+      "requires": [
+        "energy.coalbelts"
+      ],
+      "cost": [
+        [
+          "Desc_IronPlateReinforced",
+          100
+        ],
+        [
+          "Desc_ModularFrame",
+          40
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_ConveyorBeltMk2",
+          "Build_ConveyorLiftMk2",
+          "Build_ConveyorBeltMk3",
+          "Build_ConveyorLiftMk3"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "energy.fuelrouting",
+      "division": "energy",
+      "tier": 4,
+      "col": 2,
+      "requires": [
+        "energy.fastbelts"
+      ],
+      "cost": [
+        [
+          "Desc_SteelPlateReinforced",
+          60
+        ],
+        [
+          "Desc_Stator",
+          60
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_ConveyorAttachmentSplitterSmart",
+          "Build_ConveyorAttachmentSplitterSmartLift",
+          "Build_ConveyorAttachmentMergerPriority",
+          "Build_ConveyorAttachmentMergerPriorityLift"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "energy.forge",
+      "division": "energy",
+      "tier": 2,
+      "col": 3,
+      "requires": [
+        "energy.induction"
+      ],
+      "cost": [
+        [
+          "Desc_Wire",
+          500
+        ],
+        [
+          "Desc_Rotor",
+          40
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_SmelterMk1",
+          "Build_ConstructorMk1"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "energy.assembly",
+      "division": "energy",
+      "tier": 3,
+      "col": 3,
+      "requires": [
+        "energy.forge"
+      ],
+      "cost": [
+        [
+          "Desc_CopperSheet",
+          300
+        ],
+        [
+          "Desc_Rotor",
+          80
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_AssemblerMk1"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "energy.foundry",
+      "division": "energy",
+      "tier": 4,
+      "col": 3,
+      "requires": [
+        "energy.assembly"
+      ],
+      "cost": [
+        [
+          "Desc_Motor",
+          30
+        ],
+        [
+          "Desc_SteelPlate",
+          160
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_FoundryMk1"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "energy.refining",
+      "division": "energy",
+      "tier": 5,
+      "col": 3,
+      "requires": [
+        "energy.foundry"
+      ],
+      "cost": [
+        [
+          "Desc_SteelPlateReinforced",
+          100
+        ],
+        [
+          "Desc_Rubber",
+          200
+        ],
+        [
+          "Desc_Motor",
+          50
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_OilRefinery"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "energy.fuelrods",
+      "division": "energy",
+      "tier": 6,
+      "col": 3,
+      "requires": [
+        "energy.refining"
+      ],
+      "cost": [
+        [
+          "Desc_CircuitBoard",
+          120
+        ],
+        [
+          "Desc_Rubber",
+          400
+        ],
+        [
+          "Desc_ModularFrameHeavy",
+          30
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_ManufacturerMk1"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "energy.accelerator",
+      "division": "energy",
+      "tier": 7,
+      "col": 3,
+      "requires": [
+        "energy.fuelrods"
+      ],
+      "cost": [
+        [
+          "Desc_AluminumPlate",
+          240
+        ],
+        [
+          "Desc_CircuitBoardHighSpeed",
+          40
+        ],
+        [
+          "Desc_ModularFrameLightweight",
+          20
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_HadronCollider"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "energy.slugs",
+      "division": "energy",
+      "tier": 2,
+      "col": 4,
+      "requires": [
+        "energy.induction"
+      ],
+      "cost": [
+        [
+          "Desc_IronPlateReinforced",
+          60
+        ],
+        [
+          "Desc_CopperSheet",
+          200
+        ]
+      ],
+      "grants": {
+        "build": [],
+        "craft": [
+          "Recipe_PowerCrystalShard_1",
+          "Recipe_PowerCrystalShard_2"
+        ],
+        "collect": [
+          "Desc_Crystal",
+          "Desc_Crystal_mk2"
+        ],
+        "equip": []
+      }
+    },
+    {
+      "id": "energy.purpleslugs",
+      "division": "energy",
+      "tier": 3,
+      "col": 4,
+      "requires": [
+        "energy.slugs"
+      ],
+      "cost": [
+        [
+          "Desc_ModularFrame",
+          40
+        ],
+        [
+          "Desc_SteelPlate",
+          120
+        ]
+      ],
+      "grants": {
+        "build": [],
+        "craft": [
+          "Recipe_PowerCrystalShard_3"
+        ],
+        "collect": [
+          "Desc_Crystal_mk3"
+        ],
+        "equip": []
+      }
+    },
+    {
+      "id": "energy.gasmask",
+      "division": "energy",
+      "tier": 4,
+      "col": 4,
+      "requires": [
+        "energy.purpleslugs"
+      ],
+      "cost": [
+        [
+          "Desc_Stator",
+          60
+        ],
+        [
+          "Desc_SteelPipe",
+          160
+        ]
+      ],
+      "grants": {
+        "build": [],
+        "craft": [
+          "Recipe_Gasmask",
+          "Recipe_FilterGasMask"
+        ],
+        "collect": [],
+        "equip": [
+          "Equip_GasMask"
+        ]
+      }
+    },
+    {
+      "id": "energy.hazmat",
+      "division": "energy",
+      "tier": 5,
+      "col": 4,
+      "requires": [
+        "energy.gasmask"
+      ],
+      "cost": [
+        [
+          "Desc_Plastic",
+          200
+        ],
+        [
+          "Desc_CircuitBoard",
+          60
+        ]
+      ],
+      "grants": {
+        "build": [],
+        "craft": [
+          "Recipe_HazmatSuit",
+          "Recipe_FilterHazmat"
+        ],
+        "collect": [],
+        "equip": [
+          "Equip_HazmatSuit"
+        ]
+      }
+    },
+    {
+      "id": "energy.foundations",
+      "division": "energy",
+      "tier": 2,
+      "col": 5,
+      "requires": [
+        "energy.induction"
+      ],
+      "cost": [
+        [
+          "Desc_Rotor",
+          40
+        ],
+        [
+          "Desc_Cement",
+          300
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_ConcreteConcaveRoundFoundation_*",
+          "Build_Concrete_*",
+          "Build_DownQuarterPipeInCorner_*",
+          "Build_DownQuarterPipeOutCorner_*",
+          "Build_DownQuarterPipe_*",
+          "Build_Flat_*",
+          "Build_FoundationGlass_*",
+          "Build_FoundationPassthrough_Lift",
+          "Build_Foundation_*",
+          "Build_InvertedRamp_*",
+          "Build_Inverted_*",
+          "Build_PillarBase",
+          "Build_PillarBase_*",
+          "Build_PillarMiddle",
+          "Build_PillarMiddle_*",
+          "Build_PillarTop",
+          "Build_Pillar_*",
+          "Build_QuarterPipe",
+          "Build_QuarterPipeCorner_*",
+          "Build_QuarterPipeInCorner_*",
+          "Build_QuarterPipeMiddleInCorner_*",
+          "Build_QuarterPipeMiddleOutCorner_*",
+          "Build_QuarterPipeMiddle_*",
+          "Build_QuarterPipeOutCorner_*",
+          "Build_QuarterPipe_*",
+          "Build_RampDouble",
+          "Build_RampDouble_*",
+          "Build_RampInverted_*",
+          "Build_Ramp_*"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "energy.walls",
+      "division": "energy",
+      "tier": 3,
+      "col": 5,
+      "requires": [
+        "energy.foundations"
+      ],
+      "cost": [
+        [
+          "Desc_Rotor",
+          80
+        ],
+        [
+          "Desc_IronPlateReinforced",
+          100
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_Barrier_*",
+          "Build_BigGarageDoor_*",
+          "Build_ChainLinkFence",
+          "Build_DoorMiddle",
+          "Build_FenceRamp_*",
+          "Build_Fence_*",
+          "Build_FloodlightWall",
+          "Build_Gate_*",
+          "Build_Roof_*",
+          "Build_SteelWall_*",
+          "Build_TarpFence",
+          "Build_WallSet_*",
+          "Build_Wall_*"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "energy.walkways",
+      "division": "energy",
+      "tier": 4,
+      "col": 5,
+      "requires": [
+        "energy.walls"
+      ],
+      "cost": [
+        [
+          "Desc_SteelPlate",
+          160
+        ],
+        [
+          "Desc_SteelPlateReinforced",
+          60
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_Beam",
+          "Build_Beam_*",
+          "Build_CatwalkCorner",
+          "Build_CatwalkCross",
+          "Build_CatwalkRamp",
+          "Build_CatwalkStairs",
+          "Build_CatwalkStraight",
+          "Build_CatwalkT",
+          "Build_Ladder",
+          "Build_Railing_*",
+          "Build_SM_RailingRamp_*",
+          "Build_Stair_*",
+          "Build_Stairs_*",
+          "Build_WalkwayCross",
+          "Build_WalkwayRamp",
+          "Build_WalkwayStraight",
+          "Build_WalkwayT",
+          "Build_WalkwayTrun",
+          "Build_CandyCaneDecor",
+          "Build_CeilingLight",
+          "Build_FloodlightPole",
+          "Build_LargeFan",
+          "Build_LargeVent",
+          "Build_LightsControlPanel",
+          "Build_Locker_*",
+          "Build_PortalPotty",
+          "Build_SignPole",
+          "Build_SignPole_*",
+          "Build_SnowCannon",
+          "Build_SnowDispenser",
+          "Build_Snowman",
+          "Build_StackableShelf",
+          "Build_StandaloneWidgetSign_*",
+          "Build_StorageHazard",
+          "Build_StorageMedkit",
+          "Build_StreetLight",
+          "Build_TreeGiftProducer",
+          "Build_WreathDecor",
+          "Build_XmassLightsLine",
+          "Build_XmassTree"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "energy.survey",
+      "division": "energy",
+      "tier": 3,
+      "col": 6,
+      "requires": [
+        "energy.induction"
+      ],
+      "cost": [
+        [
+          "Desc_SteelPlate",
+          120
+        ],
+        [
+          "Desc_CopperSheet",
+          300
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_LookoutTower",
+          "Build_RadarTower"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "industry.induction",
+      "division": "industry",
+      "tier": 1,
+      "col": 3,
+      "requires": [],
+      "cost": [
+        [
+          "Desc_Wire",
+          300
+        ],
+        [
+          "Desc_Cement",
+          200
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_Ladder",
+          "Build_StorageContainerMk1"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "industry.linefeed",
+      "division": "industry",
+      "tier": 2,
+      "col": 0,
+      "requires": [
+        "industry.induction"
+      ],
+      "cost": [
+        [
+          "Desc_CopperSheet",
+          200
+        ],
+        [
+          "Desc_Wire",
+          500
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_ConveyorBeltMk1",
+          "Build_ConveyorLiftMk1",
+          "Build_ConveyorAttachmentSplitter",
+          "Build_ConveyorAttachmentSplitterLift",
+          "Build_ConveyorAttachmentMerger",
+          "Build_ConveyorAttachmentMergerLift",
+          "Build_ConveyorPole",
+          "Build_ConveyorPoleStackable",
+          "Build_ConveyorPoleWall",
+          "Build_ConveyorCeilingAttachment",
+          "Build_ConveyorWallHole"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "industry.belts2",
+      "division": "industry",
+      "tier": 3,
+      "col": 0,
+      "requires": [
+        "industry.linefeed"
+      ],
+      "cost": [
+        [
+          "Desc_IronPlateReinforced",
+          100
+        ],
+        [
+          "Desc_ModularFrame",
+          40
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_ConveyorBeltMk2",
+          "Build_ConveyorLiftMk2"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "industry.floorbelts",
+      "division": "industry",
+      "tier": 4,
+      "col": 0,
+      "requires": [
+        "industry.belts2"
+      ],
+      "cost": [
+        [
+          "Desc_SteelPipe",
+          160
+        ],
+        [
+          "Desc_Motor",
+          30
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_ConveyorBeltMk3",
+          "Build_ConveyorLiftMk3",
+          "Build_StorageContainerMk2"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "industry.sorting",
+      "division": "industry",
+      "tier": 5,
+      "col": 0,
+      "requires": [
+        "industry.floorbelts"
+      ],
+      "cost": [
+        [
+          "Desc_Rubber",
+          200
+        ],
+        [
+          "Desc_Motor",
+          50
+        ],
+        [
+          "Desc_Plastic",
+          200
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_ConveyorAttachmentSplitterSmart",
+          "Build_ConveyorAttachmentSplitterSmartLift",
+          "Build_ConveyorAttachmentMergerPriority",
+          "Build_ConveyorAttachmentMergerPriorityLift"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "industry.poles",
+      "division": "industry",
+      "tier": 2,
+      "col": 1,
+      "requires": [
+        "industry.induction"
+      ],
+      "cost": [
+        [
+          "Desc_Cement",
+          300
+        ],
+        [
+          "Desc_IronPlateReinforced",
+          60
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_PowerPoleMk1",
+          "Build_PowerPoleWall",
+          "Build_PowerPoleWallDouble",
+          "Build_PowerLine"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "industry.burner",
+      "division": "industry",
+      "tier": 3,
+      "col": 1,
+      "requires": [
+        "industry.poles"
+      ],
+      "cost": [
+        [
+          "Desc_CopperSheet",
+          300
+        ],
+        [
+          "Desc_Rotor",
+          80
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_GeneratorBiomass*"
+        ],
+        "craft": [],
+        "collect": [
+          "Desc_Leaves",
+          "Desc_Wood"
+        ],
+        "equip": []
+      }
+    },
+    {
+      "id": "industry.coalpower",
+      "division": "industry",
+      "tier": 4,
+      "col": 1,
+      "requires": [
+        "industry.burner"
+      ],
+      "cost": [
+        [
+          "Desc_SteelPlateReinforced",
+          60
+        ],
+        [
+          "Desc_Stator",
+          60
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_GeneratorCoal"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "industry.poles2",
+      "division": "industry",
+      "tier": 5,
+      "col": 1,
+      "requires": [
+        "industry.coalpower"
+      ],
+      "cost": [
+        [
+          "Desc_CircuitBoard",
+          60
+        ],
+        [
+          "Desc_SteelPlateReinforced",
+          100
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_PowerPoleMk2",
+          "Build_PowerPoleWall_Mk2",
+          "Build_PowerPoleWallDouble_Mk2",
+          "Build_PowerSwitch"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "industry.pipes",
+      "division": "industry",
+      "tier": 3,
+      "col": 2,
+      "requires": [
+        "industry.induction"
+      ],
+      "cost": [
+        [
+          "Desc_ModularFrame",
+          40
+        ],
+        [
+          "Desc_SteelPlate",
+          120
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_Pipeline",
+          "Build_Pipeline_*",
+          "Build_PipelineSupport",
+          "Build_PipelineSupportWall",
+          "Build_PipelineSupportWallHole",
+          "Build_PipelineJunction_*",
+          "Build_PipelineFlowIndicator",
+          "Build_PipeSupportStackable",
+          "Build_FoundationPassthrough_Pipe"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "industry.water",
+      "division": "industry",
+      "tier": 4,
+      "col": 2,
+      "requires": [
+        "industry.pipes"
+      ],
+      "cost": [
+        [
+          "Desc_Motor",
+          30
+        ],
+        [
+          "Desc_SteelPlate",
+          160
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_WaterPump",
+          "Build_PipelinePump",
+          "Build_Valve",
+          "Build_PipeStorageTank"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "industry.oil",
+      "division": "industry",
+      "tier": 5,
+      "col": 2,
+      "requires": [
+        "industry.water"
+      ],
+      "cost": [
+        [
+          "Desc_Motor",
+          50
+        ],
+        [
+          "Desc_Plastic",
+          200
+        ],
+        [
+          "Desc_CircuitBoard",
+          60
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_OilPump"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "industry.pipes2",
+      "division": "industry",
+      "tier": 6,
+      "col": 2,
+      "requires": [
+        "industry.oil"
+      ],
+      "cost": [
+        [
+          "Desc_Plastic",
+          400
+        ],
+        [
+          "Desc_Computer",
+          30
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_PipelineMK2",
+          "Build_PipelineMK2_*",
+          "Build_PipelinePumpMK2",
+          "Build_IndustrialTank"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "industry.wells",
+      "division": "industry",
+      "tier": 7,
+      "col": 2,
+      "requires": [
+        "industry.pipes2"
+      ],
+      "cost": [
+        [
+          "Desc_AluminumPlateReinforced",
+          80
+        ],
+        [
+          "Desc_Battery",
+          80
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_FrackingExtractor",
+          "Build_FrackingSmasher"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "industry.shards",
+      "division": "industry",
+      "tier": 2,
+      "col": 3,
+      "requires": [
+        "industry.induction"
+      ],
+      "cost": [
+        [
+          "Desc_Wire",
+          500
+        ],
+        [
+          "Desc_Rotor",
+          40
+        ]
+      ],
+      "grants": {
+        "build": [],
+        "craft": [
+          "Recipe_PowerCrystalShard_1"
+        ],
+        "collect": [
+          "Desc_Crystal"
+        ],
+        "equip": []
+      }
+    },
+    {
+      "id": "industry.yellowshards",
+      "division": "industry",
+      "tier": 3,
+      "col": 3,
+      "requires": [
+        "industry.shards"
+      ],
+      "cost": [
+        [
+          "Desc_Rotor",
+          80
+        ],
+        [
+          "Desc_IronPlateReinforced",
+          100
+        ]
+      ],
+      "grants": {
+        "build": [],
+        "craft": [
+          "Recipe_PowerCrystalShard_2"
+        ],
+        "collect": [
+          "Desc_Crystal_mk2"
+        ],
+        "equip": []
+      }
+    },
+    {
+      "id": "industry.purpleshards",
+      "division": "industry",
+      "tier": 4,
+      "col": 3,
+      "requires": [
+        "industry.yellowshards"
+      ],
+      "cost": [
+        [
+          "Desc_Stator",
+          60
+        ],
+        [
+          "Desc_SteelPipe",
+          160
+        ]
+      ],
+      "grants": {
+        "build": [],
+        "craft": [
+          "Recipe_PowerCrystalShard_3"
+        ],
+        "collect": [
+          "Desc_Crystal_mk3"
+        ],
+        "equip": []
+      }
+    },
+    {
+      "id": "industry.amplification",
+      "division": "industry",
+      "tier": 5,
+      "col": 3,
+      "requires": [
+        "industry.purpleshards"
+      ],
+      "cost": [
+        [
+          "Desc_Plastic",
+          300
+        ],
+        [
+          "Desc_CircuitBoard",
+          80
+        ],
+        [
+          "Desc_WAT2",
+          10
+        ]
+      ],
+      "grants": {
+        "build": [],
+        "craft": [],
+        "collect": [
+          "Desc_WAT1"
+        ],
+        "equip": []
+      }
+    },
+    {
+      "id": "industry.gasmask",
+      "division": "industry",
+      "tier": 3,
+      "col": 4,
+      "requires": [
+        "industry.induction"
+      ],
+      "cost": [
+        [
+          "Desc_SteelPlate",
+          120
+        ],
+        [
+          "Desc_CopperSheet",
+          300
+        ]
+      ],
+      "grants": {
+        "build": [],
+        "craft": [
+          "Recipe_Gasmask",
+          "Recipe_FilterGasMask"
+        ],
+        "collect": [],
+        "equip": [
+          "Equip_GasMask"
+        ]
+      }
+    },
+    {
+      "id": "industry.hazmat",
+      "division": "industry",
+      "tier": 4,
+      "col": 4,
+      "requires": [
+        "industry.gasmask"
+      ],
+      "cost": [
+        [
+          "Desc_SteelPlate",
+          160
+        ],
+        [
+          "Desc_SteelPlateReinforced",
+          60
+        ]
+      ],
+      "grants": {
+        "build": [],
+        "craft": [
+          "Recipe_HazmatSuit",
+          "Recipe_FilterHazmat"
+        ],
+        "collect": [],
+        "equip": [
+          "Equip_HazmatSuit"
+        ]
+      }
+    },
+    {
+      "id": "industry.foundations",
+      "division": "industry",
+      "tier": 2,
+      "col": 5,
+      "requires": [
+        "industry.induction"
+      ],
+      "cost": [
+        [
+          "Desc_IronPlateReinforced",
+          60
+        ],
+        [
+          "Desc_CopperSheet",
+          200
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_ConcreteConcaveRoundFoundation_*",
+          "Build_Concrete_*",
+          "Build_DownQuarterPipeInCorner_*",
+          "Build_DownQuarterPipeOutCorner_*",
+          "Build_DownQuarterPipe_*",
+          "Build_Flat_*",
+          "Build_FoundationGlass_*",
+          "Build_FoundationPassthrough_Lift",
+          "Build_Foundation_*",
+          "Build_InvertedRamp_*",
+          "Build_Inverted_*",
+          "Build_PillarBase",
+          "Build_PillarBase_*",
+          "Build_PillarMiddle",
+          "Build_PillarMiddle_*",
+          "Build_PillarTop",
+          "Build_Pillar_*",
+          "Build_QuarterPipe",
+          "Build_QuarterPipeCorner_*",
+          "Build_QuarterPipeInCorner_*",
+          "Build_QuarterPipeMiddleInCorner_*",
+          "Build_QuarterPipeMiddleOutCorner_*",
+          "Build_QuarterPipeMiddle_*",
+          "Build_QuarterPipeOutCorner_*",
+          "Build_QuarterPipe_*",
+          "Build_RampDouble",
+          "Build_RampDouble_*",
+          "Build_RampInverted_*",
+          "Build_Ramp_*"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "industry.walls",
+      "division": "industry",
+      "tier": 3,
+      "col": 5,
+      "requires": [
+        "industry.foundations"
+      ],
+      "cost": [
+        [
+          "Desc_IronPlateReinforced",
+          100
+        ],
+        [
+          "Desc_ModularFrame",
+          40
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_Barrier_*",
+          "Build_BigGarageDoor_*",
+          "Build_ChainLinkFence",
+          "Build_DoorMiddle",
+          "Build_FenceRamp_*",
+          "Build_Fence_*",
+          "Build_FloodlightWall",
+          "Build_Gate_*",
+          "Build_Roof_*",
+          "Build_SteelWall_*",
+          "Build_TarpFence",
+          "Build_WallSet_*",
+          "Build_Wall_*"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "industry.walkways",
+      "division": "industry",
+      "tier": 4,
+      "col": 5,
+      "requires": [
+        "industry.walls"
+      ],
+      "cost": [
+        [
+          "Desc_SteelPipe",
+          160
+        ],
+        [
+          "Desc_Motor",
+          30
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_Beam",
+          "Build_Beam_*",
+          "Build_CatwalkCorner",
+          "Build_CatwalkCross",
+          "Build_CatwalkRamp",
+          "Build_CatwalkStairs",
+          "Build_CatwalkStraight",
+          "Build_CatwalkT",
+          "Build_Ladder",
+          "Build_Railing_*",
+          "Build_SM_RailingRamp_*",
+          "Build_Stair_*",
+          "Build_Stairs_*",
+          "Build_WalkwayCross",
+          "Build_WalkwayRamp",
+          "Build_WalkwayStraight",
+          "Build_WalkwayT",
+          "Build_WalkwayTrun",
+          "Build_CandyCaneDecor",
+          "Build_CeilingLight",
+          "Build_FloodlightPole",
+          "Build_LargeFan",
+          "Build_LargeVent",
+          "Build_LightsControlPanel",
+          "Build_Locker_*",
+          "Build_PortalPotty",
+          "Build_SignPole",
+          "Build_SignPole_*",
+          "Build_SnowCannon",
+          "Build_SnowDispenser",
+          "Build_Snowman",
+          "Build_StackableShelf",
+          "Build_StandaloneWidgetSign_*",
+          "Build_StorageHazard",
+          "Build_StorageMedkit",
+          "Build_StreetLight",
+          "Build_TreeGiftProducer",
+          "Build_WreathDecor",
+          "Build_XmassLightsLine",
+          "Build_XmassTree"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "industry.trucks",
+      "division": "industry",
+      "tier": 3,
+      "col": 6,
+      "requires": [
+        "industry.induction"
+      ],
+      "cost": [
+        [
+          "Desc_CopperSheet",
+          300
+        ],
+        [
+          "Desc_Rotor",
+          80
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_TruckStation"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "industry.freightrail",
+      "division": "industry",
+      "tier": 4,
+      "col": 6,
+      "requires": [
+        "industry.trucks"
+      ],
+      "cost": [
+        [
+          "Desc_SteelPlateReinforced",
+          60
+        ],
+        [
+          "Desc_Stator",
+          60
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_Railroad*",
+          "Build_TrainStation",
+          "Build_TrainPlatformEmpty*",
+          "Build_TrainDockingStation*"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "logistics.lookout",
+      "division": "logistics",
+      "tier": 1,
+      "col": 3,
+      "requires": [],
+      "cost": [
+        [
+          "Desc_Cable",
+          150
+        ],
+        [
+          "Desc_IronScrew",
+          500
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_LookoutTower"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "logistics.forge",
+      "division": "logistics",
+      "tier": 2,
+      "col": 0,
+      "requires": [
+        "logistics.lookout"
+      ],
+      "cost": [
+        [
+          "Desc_Rotor",
+          40
+        ],
+        [
+          "Desc_Cement",
+          300
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_SmelterMk1",
+          "Build_ConstructorMk1"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "logistics.assembly",
+      "division": "logistics",
+      "tier": 3,
+      "col": 0,
+      "requires": [
+        "logistics.forge"
+      ],
+      "cost": [
+        [
+          "Desc_ModularFrame",
+          40
+        ],
+        [
+          "Desc_SteelPlate",
+          120
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_AssemblerMk1"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "logistics.steel",
+      "division": "logistics",
+      "tier": 4,
+      "col": 0,
+      "requires": [
+        "logistics.assembly"
+      ],
+      "cost": [
+        [
+          "Desc_Motor",
+          30
+        ],
+        [
+          "Desc_SteelPlate",
+          160
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_FoundryMk1"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "logistics.packaging",
+      "division": "logistics",
+      "tier": 5,
+      "col": 0,
+      "requires": [
+        "logistics.steel"
+      ],
+      "cost": [
+        [
+          "Desc_SteelPlateReinforced",
+          100
+        ],
+        [
+          "Desc_Rubber",
+          200
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_Packager"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "logistics.refinery",
+      "division": "logistics",
+      "tier": 6,
+      "col": 0,
+      "requires": [
+        "logistics.packaging"
+      ],
+      "cost": [
+        [
+          "Desc_Rubber",
+          400
+        ],
+        [
+          "Desc_ModularFrameHeavy",
+          30
+        ],
+        [
+          "Desc_Plastic",
+          400
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_OilRefinery"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "logistics.poles",
+      "division": "logistics",
+      "tier": 2,
+      "col": 1,
+      "requires": [
+        "logistics.lookout"
+      ],
+      "cost": [
+        [
+          "Desc_CopperSheet",
+          200
+        ],
+        [
+          "Desc_Wire",
+          500
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_PowerPoleMk1",
+          "Build_PowerPoleWall",
+          "Build_PowerPoleWallDouble",
+          "Build_PowerLine"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "logistics.burner",
+      "division": "logistics",
+      "tier": 3,
+      "col": 1,
+      "requires": [
+        "logistics.poles"
+      ],
+      "cost": [
+        [
+          "Desc_Rotor",
+          80
+        ],
+        [
+          "Desc_IronPlateReinforced",
+          100
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_GeneratorBiomass*"
+        ],
+        "craft": [],
+        "collect": [
+          "Desc_Leaves",
+          "Desc_Wood"
+        ],
+        "equip": []
+      }
+    },
+    {
+      "id": "logistics.coalpower",
+      "division": "logistics",
+      "tier": 4,
+      "col": 1,
+      "requires": [
+        "logistics.burner"
+      ],
+      "cost": [
+        [
+          "Desc_Stator",
+          60
+        ],
+        [
+          "Desc_SteelPipe",
+          160
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_GeneratorCoal",
+          "Build_WaterPump"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "logistics.towers",
+      "division": "logistics",
+      "tier": 5,
+      "col": 1,
+      "requires": [
+        "logistics.coalpower"
+      ],
+      "cost": [
+        [
+          "Desc_Plastic",
+          200
+        ],
+        [
+          "Desc_CircuitBoard",
+          60
+        ],
+        [
+          "Desc_SteelPlateReinforced",
+          100
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_PowerTower*",
+          "Build_PowerPoleMk2",
+          "Build_PowerPoleWall_Mk2",
+          "Build_PowerPoleWallDouble_Mk2"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "logistics.switches",
+      "division": "logistics",
+      "tier": 6,
+      "col": 1,
+      "requires": [
+        "logistics.towers"
+      ],
+      "cost": [
+        [
+          "Desc_Computer",
+          30
+        ],
+        [
+          "Desc_CircuitBoard",
+          120
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_PowerSwitch",
+          "Build_PriorityPowerSwitch",
+          "Build_PowerStorageMk1"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "logistics.gasmask",
+      "division": "logistics",
+      "tier": 3,
+      "col": 2,
+      "requires": [
+        "logistics.lookout"
+      ],
+      "cost": [
+        [
+          "Desc_SteelPlate",
+          120
+        ],
+        [
+          "Desc_CopperSheet",
+          300
+        ]
+      ],
+      "grants": {
+        "build": [],
+        "craft": [
+          "Recipe_Gasmask",
+          "Recipe_FilterGasMask"
+        ],
+        "collect": [],
+        "equip": [
+          "Equip_GasMask"
+        ]
+      }
+    },
+    {
+      "id": "logistics.bladerunners",
+      "division": "logistics",
+      "tier": 4,
+      "col": 2,
+      "requires": [
+        "logistics.gasmask"
+      ],
+      "cost": [
+        [
+          "Desc_SteelPlate",
+          160
+        ],
+        [
+          "Desc_SteelPlateReinforced",
+          60
+        ]
+      ],
+      "grants": {
+        "build": [],
+        "craft": [
+          "Recipe_BladeRunners",
+          "Recipe_Parachute"
+        ],
+        "collect": [],
+        "equip": [
+          "Equip_JumpingStilts",
+          "Equip_Parachute"
+        ]
+      }
+    },
+    {
+      "id": "logistics.jetpack",
+      "division": "logistics",
+      "tier": 5,
+      "col": 2,
+      "requires": [
+        "logistics.bladerunners"
+      ],
+      "cost": [
+        [
+          "Desc_Rubber",
+          200
+        ],
+        [
+          "Desc_Motor",
+          50
+        ]
+      ],
+      "grants": {
+        "build": [],
+        "craft": [
+          "Recipe_JetPack"
+        ],
+        "collect": [],
+        "equip": [
+          "Equip_JetPack"
+        ]
+      }
+    },
+    {
+      "id": "logistics.zipline",
+      "division": "logistics",
+      "tier": 6,
+      "col": 2,
+      "requires": [
+        "logistics.jetpack"
+      ],
+      "cost": [
+        [
+          "Desc_ModularFrameHeavy",
+          30
+        ],
+        [
+          "Desc_Plastic",
+          400
+        ],
+        [
+          "Desc_Computer",
+          30
+        ]
+      ],
+      "grants": {
+        "build": [],
+        "craft": [
+          "Recipe_ZipLine"
+        ],
+        "collect": [],
+        "equip": [
+          "Equip_Zipline"
+        ]
+      }
+    },
+    {
+      "id": "logistics.hoverpack",
+      "division": "logistics",
+      "tier": 7,
+      "col": 2,
+      "requires": [
+        "logistics.zipline"
+      ],
+      "cost": [
+        [
+          "Desc_CircuitBoardHighSpeed",
+          40
+        ],
+        [
+          "Desc_ModularFrameLightweight",
+          20
+        ],
+        [
+          "Desc_AluminumPlateReinforced",
+          80
+        ]
+      ],
+      "grants": {
+        "build": [],
+        "craft": [
+          "Recipe_Hoverpack"
+        ],
+        "collect": [],
+        "equip": [
+          "Equip_HoverPack"
+        ]
+      }
+    },
+    {
+      "id": "logistics.sink",
+      "division": "logistics",
+      "tier": 2,
+      "col": 3,
+      "requires": [
+        "logistics.lookout"
+      ],
+      "cost": [
+        [
+          "Desc_Cement",
+          300
+        ],
+        [
+          "Desc_IronPlateReinforced",
+          60
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_ResourceSink",
+          "Build_ResourceSinkShop"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "logistics.blueprints",
+      "division": "logistics",
+      "tier": 3,
+      "col": 3,
+      "requires": [
+        "logistics.sink"
+      ],
+      "cost": [
+        [
+          "Desc_IronPlateReinforced",
+          100
+        ],
+        [
+          "Desc_ModularFrame",
+          40
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_BlueprintDesigner"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "logistics.blueprints2",
+      "division": "logistics",
+      "tier": 4,
+      "col": 3,
+      "requires": [
+        "logistics.blueprints"
+      ],
+      "cost": [
+        [
+          "Desc_SteelPipe",
+          160
+        ],
+        [
+          "Desc_Motor",
+          30
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_BlueprintDesigner_MK2"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "logistics.drill",
+      "division": "logistics",
+      "tier": 3,
+      "col": 4,
+      "requires": [
+        "logistics.lookout"
+      ],
+      "cost": [
+        [
+          "Desc_CopperSheet",
+          300
+        ],
+        [
+          "Desc_Rotor",
+          80
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_MinerMk1"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "logistics.remoteminer",
+      "division": "logistics",
+      "tier": 4,
+      "col": 4,
+      "requires": [
+        "logistics.drill"
+      ],
+      "cost": [
+        [
+          "Desc_SteelPlateReinforced",
+          60
+        ],
+        [
+          "Desc_Stator",
+          60
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_MinerMk2"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "logistics.radar",
+      "division": "logistics",
+      "tier": 6,
+      "col": 5,
+      "requires": [
+        "logistics.lookout"
+      ],
+      "cost": [
+        [
+          "Desc_CircuitBoard",
+          120
+        ],
+        [
+          "Desc_Rubber",
+          400
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_RadarTower"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "logistics.mercer",
+      "division": "logistics",
+      "tier": 7,
+      "col": 5,
+      "requires": [
+        "logistics.radar"
+      ],
+      "cost": [
+        [
+          "Desc_Battery",
+          80
+        ],
+        [
+          "Desc_AluminumPlate",
+          240
+        ]
+      ],
+      "grants": {
+        "build": [],
+        "craft": [],
+        "collect": [
+          "Desc_WAT2"
+        ],
+        "equip": []
+      }
+    },
+    {
+      "id": "logistics.portals",
+      "division": "logistics",
+      "tier": 8,
+      "col": 5,
+      "requires": [
+        "logistics.mercer"
+      ],
+      "cost": [
+        [
+          "Desc_ComputerSuper",
+          20
+        ],
+        [
+          "Desc_CoolingSystem",
+          60
+        ],
+        [
+          "Desc_HighSpeedConnector",
+          60
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_Portal",
+          "Build_PortalSatellite"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "general.sink",
+      "division": "general",
+      "tier": 1,
+      "col": 3,
+      "requires": [],
+      "cost": [
+        [
+          "Desc_Cement",
+          200
+        ],
+        [
+          "Desc_IronPlate",
+          200
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_ResourceSink",
+          "Build_ResourceSinkShop"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "general.foundry",
+      "division": "general",
+      "tier": 2,
+      "col": 0,
+      "requires": [
+        "general.sink"
+      ],
+      "cost": [
+        [
+          "Desc_Wire",
+          500
+        ],
+        [
+          "Desc_Rotor",
+          40
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_FoundryMk1"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "general.miner",
+      "division": "general",
+      "tier": 3,
+      "col": 0,
+      "requires": [
+        "general.foundry"
+      ],
+      "cost": [
+        [
+          "Desc_ModularFrame",
+          40
+        ],
+        [
+          "Desc_SteelPlate",
+          120
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_MinerMk2"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "general.coal",
+      "division": "general",
+      "tier": 2,
+      "col": 1,
+      "requires": [
+        "general.sink"
+      ],
+      "cost": [
+        [
+          "Desc_IronPlateReinforced",
+          60
+        ],
+        [
+          "Desc_CopperSheet",
+          200
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_GeneratorCoal"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "general.poles2",
+      "division": "general",
+      "tier": 3,
+      "col": 1,
+      "requires": [
+        "general.coal"
+      ],
+      "cost": [
+        [
+          "Desc_Rotor",
+          80
+        ],
+        [
+          "Desc_IronPlateReinforced",
+          100
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_PowerPoleMk2",
+          "Build_PowerPoleWall_Mk2",
+          "Build_PowerPoleWallDouble_Mk2"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "general.batteries",
+      "division": "general",
+      "tier": 4,
+      "col": 1,
+      "requires": [
+        "general.poles2"
+      ],
+      "cost": [
+        [
+          "Desc_Motor",
+          30
+        ],
+        [
+          "Desc_SteelPlate",
+          160
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_PowerStorageMk1",
+          "Build_PowerSwitch"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "general.water",
+      "division": "general",
+      "tier": 3,
+      "col": 2,
+      "requires": [
+        "general.sink"
+      ],
+      "cost": [
+        [
+          "Desc_SteelPlate",
+          120
+        ],
+        [
+          "Desc_CopperSheet",
+          300
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_WaterPump",
+          "Build_Pipeline",
+          "Build_Pipeline_*",
+          "Build_PipelineSupport",
+          "Build_PipelineSupportWall",
+          "Build_PipelineSupportWallHole",
+          "Build_PipelineJunction_*",
+          "Build_PipelineFlowIndicator",
+          "Build_PipeSupportStackable",
+          "Build_FoundationPassthrough_Pipe"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "general.pumps",
+      "division": "general",
+      "tier": 4,
+      "col": 2,
+      "requires": [
+        "general.water"
+      ],
+      "cost": [
+        [
+          "Desc_Stator",
+          60
+        ],
+        [
+          "Desc_SteelPipe",
+          160
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_PipelinePump",
+          "Build_Valve",
+          "Build_PipeStorageTank"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "general.belts",
+      "division": "general",
+      "tier": 2,
+      "col": 3,
+      "requires": [
+        "general.sink"
+      ],
+      "cost": [
+        [
+          "Desc_Rotor",
+          40
+        ],
+        [
+          "Desc_Cement",
+          300
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_ConveyorBeltMk3",
+          "Build_ConveyorLiftMk3"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "general.storage",
+      "division": "general",
+      "tier": 3,
+      "col": 3,
+      "requires": [
+        "general.belts"
+      ],
+      "cost": [
+        [
+          "Desc_IronPlateReinforced",
+          100
+        ],
+        [
+          "Desc_ModularFrame",
+          40
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_StorageContainerMk2"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "general.trucks",
+      "division": "general",
+      "tier": 4,
+      "col": 3,
+      "requires": [
+        "general.storage"
+      ],
+      "cost": [
+        [
+          "Desc_SteelPlate",
+          160
+        ],
+        [
+          "Desc_SteelPlateReinforced",
+          60
+        ]
+      ],
+      "grants": {
+        "build": [
+          "Build_TruckStation"
+        ],
+        "craft": [],
+        "collect": [],
+        "equip": []
+      }
+    },
+    {
+      "id": "general.rebar",
+      "division": "general",
+      "tier": 2,
+      "col": 4,
+      "requires": [
+        "general.sink"
+      ],
+      "cost": [
+        [
+          "Desc_CopperSheet",
+          200
+        ],
+        [
+          "Desc_Wire",
+          500
+        ]
+      ],
+      "grants": {
+        "build": [],
+        "craft": [
+          "Recipe_RebarGun",
+          "Recipe_SpikedRebar"
+        ],
+        "collect": [],
+        "equip": [
+          "Equip_RebarGun_Projectile"
+        ]
+      }
+    },
+    {
+      "id": "general.gasmask",
+      "division": "general",
+      "tier": 3,
+      "col": 4,
+      "requires": [
+        "general.rebar"
+      ],
+      "cost": [
+        [
+          "Desc_CopperSheet",
+          300
+        ],
+        [
+          "Desc_Rotor",
+          80
+        ]
+      ],
+      "grants": {
+        "build": [],
+        "craft": [
+          "Recipe_Gasmask",
+          "Recipe_FilterGasMask"
+        ],
+        "collect": [],
+        "equip": [
+          "Equip_GasMask"
+        ]
+      }
+    },
+    {
+      "id": "general.shards",
+      "division": "general",
+      "tier": 2,
+      "col": 5,
+      "requires": [
+        "general.sink"
+      ],
+      "cost": [
+        [
+          "Desc_Cement",
+          300
+        ],
+        [
+          "Desc_IronPlateReinforced",
+          60
+        ]
+      ],
+      "grants": {
+        "build": [],
+        "craft": [
+          "Recipe_PowerCrystalShard_1"
+        ],
+        "collect": [
+          "Desc_Crystal_mk2"
+        ],
+        "equip": []
+      }
+    }
+  ],
+  "_common": {
+    "_doc": "Intentionally unused since rev 8: every target belongs to at least one division base (see tools/validate_config.py). Kept empty for documentation only.",
+    "build": [],
+    "craft": [],
+    "collect": [],
+    "equip": []
+  },
+  "renamed": {
+    "_doc": "Save migration: \"old.id\": \"new.id\" for renamed/merged tech nodes or divisions. Never delete a shipped id without an entry here (see tools/ids.lock)."
+  }
+}

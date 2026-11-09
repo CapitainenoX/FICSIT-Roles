@@ -1,0 +1,363 @@
+[
+ {
+  "file": "UI/div_industry.png",
+  "size": [
+   256,
+   256
+  ],
+  "alpha": [
+   0,
+   255
+  ],
+  "source": "references/Icons.png crop (116, 64, 520, 540)"
+ },
+ {
+  "file": "UI/div_logistics.png",
+  "size": [
+   256,
+   256
+  ],
+  "alpha": [
+   0,
+   255
+  ],
+  "source": "references/Icons.png crop (672, 156, 1180, 532)"
+ },
+ {
+  "file": "UI/div_energy.png",
+  "size": [
+   256,
+   256
+  ],
+  "alpha": [
+   0,
+   255
+  ],
+  "source": "references/Icons.png crop (128, 696, 516, 1152)"
+ },
+ {
+  "file": "UI/div_exploration.png",
+  "size": [
+   256,
+   256
+  ],
+  "alpha": [
+   0,
+   255
+  ],
+  "source": "references/Icons.png crop (672, 684, 1176, 1148)"
+ },
+ {
+  "file": "UI/players_1.png",
+  "size": [
+   380,
+   636
+  ],
+  "alpha": [
+   255,
+   255
+  ],
+  "source": "references/PlayersAtlas-v2.png card 1 inner crop"
+ },
+ {
+  "file": "UI/players_2.png",
+  "size": [
+   380,
+   636
+  ],
+  "alpha": [
+   255,
+   255
+  ],
+  "source": "references/PlayersAtlas-v2.png card 2 inner crop"
+ },
+ {
+  "file": "UI/players_3.png",
+  "size": [
+   380,
+   636
+  ],
+  "alpha": [
+   255,
+   255
+  ],
+  "source": "references/PlayersAtlas-v2.png card 3 inner crop"
+ },
+ {
+  "file": "UI/players_4.png",
+  "size": [
+   380,
+   630
+  ],
+  "alpha": [
+   255,
+   255
+  ],
+  "source": "references/PlayersAtlas-v2.png card 4 inner crop"
+ },
+ {
+  "file": "UI/fill.png",
+  "size": [
+   64,
+   64
+  ],
+  "alpha": [
+   0,
+   255
+  ],
+  "source": "procedural chamfer fill (9-slice 16px)"
+ },
+ {
+  "file": "UI/frame.png",
+  "size": [
+   64,
+   64
+  ],
+  "alpha": [
+   0,
+   255
+  ],
+  "source": "procedural chamfer frame 2px (9-slice 16px)"
+ },
+ {
+  "file": "UI/stripes.png",
+  "size": [
+   128,
+   40
+  ],
+  "alpha": [
+   0,
+   255
+  ],
+  "source": "procedural safety stripes (tinted at runtime)"
+ },
+ {
+  "file": "UI/shade.png",
+  "size": [
+   8,
+   256
+  ],
+  "alpha": [
+   0,
+   224
+  ],
+  "source": "procedural legibility gradient"
+ },
+ {
+  "file": "UI/logo_mark.png",
+  "size": [
+   256,
+   256
+  ],
+  "alpha": [
+   0,
+   255
+  ],
+  "source": "procedural logo mark"
+ },
+ {
+  "file": "UI/logo.png",
+  "size": [
+   512,
+   512
+  ],
+  "alpha": [
+   0,
+   255
+  ],
+  "source": "procedural logo 512"
+ },
+ {
+  "file": "Icon128.png",
+  "size": [
+   128,
+   128
+  ],
+  "alpha": [
+   0,
+   255
+  ],
+  "source": "plugin icon"
+ },
+ {
+  "file": "UI/banner.png",
+  "size": [
+   1200,
+   400
+  ],
+  "alpha": [
+   255,
+   255
+  ],
+  "source": "procedural ficsit.app banner (only image with lettering besides logo)"
+ },
+ {
+  "file": "UI/panel.png",
+  "size": [
+   1600,
+   1000
+  ],
+  "alpha": [
+   0,
+   255
+  ],
+  "source": "chatgpt",
+  "prompt": "references/gen/prompts.md#1-panel (gen_panel.png; chroma-keyed, resized, interior forced to uniform #2C2E31 inside the 96px 9-slice margin)"
+ },
+ {
+  "file": "UI/card_wide.png",
+  "size": [
+   900,
+   300
+  ],
+  "alpha": [
+   0,
+   255
+  ],
+  "source": "chatgpt",
+  "prompt": "references/gen/prompts.md#2-card_wide (gen_card_wide.png)"
+ },
+ {
+  "file": "UI/card_wide_sel.png",
+  "size": [
+   900,
+   300
+  ],
+  "alpha": [
+   0,
+   255
+  ],
+  "source": "chatgpt",
+  "prompt": "references/gen/prompts.md#2-card_wide + programmatic orange outline/glow derived from card_wide.png"
+ },
+ {
+  "file": "UI/card_tall.png",
+  "size": [
+   420,
+   622
+  ],
+  "alpha": [
+   0,
+   255
+  ],
+  "source": "chatgpt",
+  "prompt": "references/gen/prompts.md#3-card_tall (gen_card_tall.png; interior transparent)"
+ },
+ {
+  "file": "UI/card_tall_sel.png",
+  "size": [
+   420,
+   622
+  ],
+  "alpha": [
+   0,
+   255
+  ],
+  "source": "chatgpt",
+  "prompt": "references/gen/prompts.md#3-card_tall + programmatic orange tint, outer glow, corner brackets"
+ },
+ {
+  "file": "UI/btn_primary.png",
+  "size": [
+   520,
+   96
+  ],
+  "alpha": [
+   0,
+   255
+  ],
+  "source": "chatgpt",
+  "prompt": "references/gen/prompts.md#4-buttons (gen_buttons.png, top component)"
+ },
+ {
+  "file": "UI/btn_primary_hover.png",
+  "size": [
+   520,
+   96
+  ],
+  "alpha": [
+   0,
+   255
+  ],
+  "source": "chatgpt",
+  "prompt": "references/gen/prompts.md#4-buttons + programmatic brighten"
+ },
+ {
+  "file": "UI/btn_secondary.png",
+  "size": [
+   260,
+   80
+  ],
+  "alpha": [
+   0,
+   255
+  ],
+  "source": "chatgpt",
+  "prompt": "references/gen/prompts.md#4-buttons (gen_buttons.png, bottom component)"
+ },
+ {
+  "file": "UI/btn_secondary_hover.png",
+  "size": [
+   260,
+   80
+  ],
+  "alpha": [
+   0,
+   255
+  ],
+  "source": "chatgpt",
+  "prompt": "references/gen/prompts.md#4-buttons + programmatic faint orange edge"
+ },
+ {
+  "file": "UI/header_ornament.png",
+  "size": [
+   900,
+   90
+  ],
+  "alpha": [
+   0,
+   255
+  ],
+  "source": "chatgpt",
+  "prompt": "references/gen/prompts.md#6-header_ornament (gen_header.png)"
+ },
+ {
+  "file": "UI/icon_person.png",
+  "size": [
+   128,
+   128
+  ],
+  "alpha": [
+   0,
+   255
+  ],
+  "source": "procedural",
+  "prompt": "Pillow 8x supersampled outline person"
+ },
+ {
+  "file": "UI/icon_back.png",
+  "size": [
+   64,
+   64
+  ],
+  "alpha": [
+   0,
+   255
+  ],
+  "source": "procedural",
+  "prompt": "Pillow 8x supersampled chevron"
+ },
+ {
+  "file": "UI/icon_check.png",
+  "size": [
+   64,
+   64
+  ],
+  "alpha": [
+   0,
+   255
+  ],
+  "source": "procedural",
+  "prompt": "Pillow 8x supersampled check mark"
+ }
+]

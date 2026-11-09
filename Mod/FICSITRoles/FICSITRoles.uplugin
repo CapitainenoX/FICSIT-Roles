@@ -1,0 +1,22 @@
+{
+	"FileVersion": 3,
+	"Version": 10,
+	"VersionName": "1.0.0",
+	"SemVersion": "1.0.0",
+	"GameVersion": ">=517554",
+	"FriendlyName": "FICSIT Roles",
+	"Description": "Industrial roleplay divisions for co-op: server-authoritative build permissions, division MAM clearances, lobby, FICSIT terminal, assistance requests. 15 languages.",
+	"Category": "Gameplay",
+	"CreatedBy": "CapitainenoX",
+	"CanContainContent": true,
+	"IsBetaVersion": false,
+	"Installed": false,
+	"AcceptsAnyRemoteVersion": false,
+	"RemoteVersionRange": "1.0.0",
+	"Modules": [
+		{ "Name": "FICSITRoles", "Type": "Runtime", "LoadingPhase": "PostDefault" }
+	],
+	"Plugins": [
+		{ "Name": "SML", "Enabled": true, "SemVersion": "^3.12.0" }
+	]
+}

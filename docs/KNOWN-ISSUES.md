@@ -10,3 +10,6 @@
 | 6 | `ficsit apply` removes non-profile mods | Manual install disappears after a ficsit-cli apply | Redeploy (`scripts\deploy.ps1`) or install via mod manager |
 | 7 | Language is read at world load (MAM texts) | Changing language mid-game updates UI/toasts, MAM names after reload | Reload the save |
 | 8 | Old saves from the 0.x Lua prototype | Their roles are not migrated (different storage) | Players pick again once |
+
+- Division messages and assistance requests (with location) are replicated to every client: the mod is co-operative, so they are not secret; a cheating client could read messages addressed to another division.
+- Host rights: the listen-server player is host; a remote player only inherits host rights with a valid online id (name-only ids are never trusted).

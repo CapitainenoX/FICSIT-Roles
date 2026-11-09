@@ -223,7 +223,8 @@ FFRPlayerRecord* AFRRolesSubsystem::EnsureRecord(APlayerController* Controller)
 		for (FFRPlayerRecord& P : Players) P.bIsHost = false;
 		Record->bIsHost = true; bChanged = true;
 	}
-	if (!Players.ContainsByPredicate([](const FFRPlayerRecord& P) { return P.bIsHost; }))
+	// Name-based ids (offline, no online id) can be spoofed: they never inherit host rights.
+	if (!Id.StartsWith(TEXT("name:")) && !Players.ContainsByPredicate([](const FFRPlayerRecord& P) { return P.bIsHost; }))
 	{
 		Record->bIsHost = true; bChanged = true;
 	}
@@ -237,7 +238,7 @@ bool AFRRolesSubsystem::IsAdmin(const APlayerController* Controller) const
 	if (!Controller) return false;
 	if (HasAuthority() && Controller->IsLocalController()) return true;
 	const FFRPlayerRecord* Record = FindPlayer(Controller);
-	return Record && Record->bIsHost;
+	return Record && Record->bIsHost && !Record->Id.StartsWith(TEXT("name:"));
 }
 
 // --- Permission engine ----------------------------------------------------------------------

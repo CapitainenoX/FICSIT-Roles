@@ -3,11 +3,23 @@
 $ErrorActionPreference = 'Stop'
 $Root = Split-Path -Parent $PSScriptRoot
 $Gh = 'C:\Program Files\GitHub CLI\gh.exe'
-
 if (!(Test-Path $Gh)) {
-  Write-Output 'Installing GitHub CLI...'
-  winget install --id GitHub.cli -e --accept-source-agreements --accept-package-agreements
-  if (!(Test-Path $Gh)) { throw 'GitHub CLI install failed - install it from https://cli.github.com then run this script again.' }
+  # Portable GitHub CLI (official release zip), kept in temp\gh - nothing installed system-wide.
+  $Portable = Join-Path $Root 'temp\gh'
+  $Gh = Get-ChildItem $Portable -Recurse -Filter gh.exe -ErrorAction SilentlyContinue | Select-Object -First 1 -ExpandProperty FullName
+  if (!$Gh) {
+    Write-Output 'Downloading GitHub CLI (portable)...'
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+    $Release = Invoke-RestMethod 'https://api.github.com/repos/cli/cli/releases/latest' -Headers @{ 'User-Agent' = 'FICSIT-Roles-publish' }
+    $Asset = $Release.assets | Where-Object { $_.name -like '*_windows_amd64.zip' } | Select-Object -First 1
+    if (!$Asset) { throw 'GitHub CLI download not found - install it from https://cli.github.com then run this script again.' }
+    New-Item -ItemType Directory -Force -Path $Portable | Out-Null
+    $Zip = Join-Path $Portable $Asset.name
+    Invoke-WebRequest $Asset.browser_download_url -OutFile $Zip -UseBasicParsing
+    Expand-Archive $Zip -DestinationPath $Portable -Force
+    $Gh = Get-ChildItem $Portable -Recurse -Filter gh.exe | Select-Object -First 1 -ExpandProperty FullName
+  }
+  if (!$Gh) { throw 'GitHub CLI unavailable.' }
 }
 
 & $Gh auth status 2>$null
